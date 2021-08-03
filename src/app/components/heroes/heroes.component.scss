@@ -1,41 +1,94 @@
-.container{
+    .container{
+        position: absolute;
+        max-width: 100%;
+        background-color: black;
+        height: auto;
+    }
 
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    max-width: 100%;
-    /* box-sizing: content-box; */
-    width: 100%;
-    background-color: black;
-    justify-content: space-around;
-}
+    .heroe-int-content {
+
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        background-color: rgb(131, 167, 235);        
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        
+
+    }
+
+    .heroe-str-content {
+
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        background-color: rgb(226, 112, 112);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+
+    }
+
+    .heroe-agi-content {
+
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        background-color: rgb(146, 202, 146);        
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+    }
+
+
 
 .header-heroe{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 0.5rem;
 
-    display: flex;
-    /* flex-wrap: nowrap; */
-    /* align-content: center; */
-    /* justify-content: space-between; */
-    /* align-items: flex-end; */
-    align-items: center;
-    position: relative;
+    .mat-card-title{
+        color: white;
+        text-shadow: 2px 2px #000000;
+    }
 
-    .header-image{ 
-
-        .icon-heroe{ 
-       
-            width: calc(100% + 20px) !important;
-
-        }
-        
+    img{
+        width: 100%;
+        height: auto;
     }
 
 }
 
+.mat-card-header .mat-card-title {
+    font-size: 1rem;
+}
+
 .example-card {
 
-    max-width: 260px;
+    max-width: 200px;
+    width: 100%;
     margin: 1rem;
+    padding: 1rem !important;
+    border-radius: 20px;
+
+    .header-heroe{
+        display: none;
+    }
     
   }
+
+.example-card:hover{
+    transform: scale(1.2);
+
+    .header-heroe{
+        display: block;
+    }
+}

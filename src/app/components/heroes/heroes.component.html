@@ -1,24 +1,30 @@
   <div class="container" >
-    <mat-card class="example-card" *ngFor="let heroe of heroes">
+    <div class="heroe-int-content">
+    <mat-card class="example-card mat-elevation-z6" style="background-color: rgb(97, 132, 197);" *ngFor="let heroe of heroesInt" >
       <mat-card-header class="header-heroe">
-        <div mat-card-avatar class="header-image"> <img class="icon-heroe" mat-card-image src="https://api.opendota.com{{heroe.icon}}">  </div>
         <mat-card-title>{{heroe.localized_name}}</mat-card-title>
-        <mat-card-subtitle>{{heroe.attack_type}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://api.opendota.com{{heroe.img}}">
+    </mat-card>
+  </div>
+
+  <div class="heroe-str-content">
+    <mat-card class="example-card mat-elevation-z6" style="background-color: rgb(209, 82, 73);" *ngFor="let heroe of heroesStr">
+      <mat-card-header class="header-heroe">
+        <mat-card-title>{{heroe.localized_name}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="https://api.opendota.com{{heroe.img}}">
+    </mat-card>
+  </div>
+
+  <div class="heroe-agi-content">
+    <mat-card class="example-card mat-elevation-z6" style="background-color: rgb(92, 224, 109);" *ngFor="let heroe of heroesAgi">
+      <mat-card-header class="header-heroe">
+        <mat-card-title>{{heroe.localized_name}}</mat-card-title>
       </mat-card-header>
 
       <img mat-card-image src="https://api.opendota.com{{heroe.img}}">
-
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
     </mat-card>
+  </div>
 
   </div>

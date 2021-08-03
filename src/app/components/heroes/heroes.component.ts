@@ -9,7 +9,9 @@ import { HeroesService } from '../../services/heroes.service';
 })
 export class HeroesComponent implements OnInit {
 
-  heroes: heroes[] = [];
+  heroesInt: heroes[] = [];
+  heroesStr: heroes[] = [];
+  heroesAgi: heroes[] = [];
 
   constructor( private heroesService : HeroesService) {
 
@@ -24,7 +26,11 @@ export class HeroesComponent implements OnInit {
 
   getHeroes(){ 
 
-    this.heroesService.getHeroesDota().subscribe( heroe => this.heroes = heroe )
+    this.heroesService.getHeroesDota().subscribe( heroe => {
+      this.heroesInt = heroe.filter(({primary_attr}) => primary_attr ==='int')
+      this.heroesStr = heroe.filter(({primary_attr}) => primary_attr ==='str')
+      this.heroesAgi = heroe.filter(({primary_attr}) => primary_attr ==='agi')
+     } )
 
   }
 

@@ -11,19 +11,19 @@ export class TeamsService {
 
   getTeamsDota(){ 
 
-    return this.http.get<teams[]>('http://localhost:8080/api/teams')
+    return this.http.get<teams[]>('/api/teams')
 
   }
 
   getTeamById(teamId:number){
 
-    return this.http.get<teams>(`http://localhost:8080/api/teams/${teamId}`)
+    return this.http.get<teams>(`/api/teams/${teamId}`)
 
   }
 
   getPlayersByTeamId(teamId:number){
 
-    return this.http.get<player[]>(`http://localhost:8080/api/teams/${teamId}/players`)
+    return this.http.get<player[]>(`/api/teams/${teamId}/players`)
 
   }
 }

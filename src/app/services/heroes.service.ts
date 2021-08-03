@@ -12,7 +12,7 @@ export class HeroesService {
 
   getHeroesDota(){ 
 
-    return this.http.get<heroes[]>('http://localhost:8080/api/heroes');
+    return this.http.get<heroes[]>('/api/heroes');
 
   }
 }
